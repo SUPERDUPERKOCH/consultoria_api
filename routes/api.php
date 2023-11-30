@@ -51,13 +51,35 @@ Route::group([
         Route::post('user/recovery', 'UserRecoveryController@recovery')->name('user.password.recoveryUser')->middleware(['web']);
         Route::get('user/recovery/{token}', 'UserRecoveryController@recoveryForm')->name('user.password.recoveryUser.form')->middleware(['web']);
         Route::post('user/recovery/{token}', 'UserRecoveryController@change')->middleware(['web']);
-  
+
+        
         /*
         |--------------------------------------------------------------------------
-        | Paciente Routes
+        | Alimento Routes
         |--------------------------------------------------------------------------
         */
-        Route::resource('pacientes', 'PacienteController');
+        Route::resource('alimentos', 'AlimentoController');
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Aluno Routes
+        |--------------------------------------------------------------------------
+        */
+        Route::resource('alunos', 'AlunoController');
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Dobra Routes
+        |--------------------------------------------------------------------------
+        */
+        Route::resource('dobras', 'DobraController');
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Medida Routes
+        |--------------------------------------------------------------------------
+        */
+        Route::resource('medidas', 'MedidaController');
 
     });
 });
