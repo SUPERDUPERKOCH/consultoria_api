@@ -81,5 +81,12 @@ Route::group([
         */
         Route::resource('medidas', 'MedidaController');
 
+        /*
+        |--------------------------------------------------------------------------
+        | Dieta Routes
+        |--------------------------------------------------------------------------
+        */
+        Route::resource('dietas', 'DietaController');
     });
 });
+
